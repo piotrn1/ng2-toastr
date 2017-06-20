@@ -62,6 +62,7 @@ var ToastContainer = (function () {
         this.toasts = this.toasts.filter(function (t) {
             return t.id !== toast.id;
         });
+        this.cdr.detectChanges();
     };
     ToastContainer.prototype.removeAllToasts = function () {
         this.toasts = [];

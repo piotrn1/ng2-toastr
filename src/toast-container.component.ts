@@ -169,6 +169,7 @@ export class ToastContainer implements OnDestroy {
     this.toasts = this.toasts.filter((t) => {
       return t.id !== toast.id;
     });
+    this.cdr.detectChanges();
   }
 
   removeAllToasts() {
